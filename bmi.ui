@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BMIWindow</class>
+ <widget class="QWidget" name="BMIWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>400</width><height>340</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>BMI and Age Calculator</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex"><number>0</number></property>
+
+     <widget class="QWidget" name="bmiTab">
+      <attribute name="title"><string>BMI</string></attribute>
+      <layout class="QVBoxLayout" name="bmiLayout">
+       <item>
+        <layout class="QFormLayout" name="formLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="nameLabel">
+           <property name="text"><string>Name:</string></property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="nameEdit"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="heightLabel">
+           <property name="text"><string>Height (cm):</string></property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="heightEdit"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="weightLabel">
+           <property name="text"><string>Weight (kg):</string></property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="weightEdit"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="calcButton">
+         <property name="text"><string>Calculate BMI</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="resultLabel">
+         <property name="text"><string/></property>
+         <property name="wordWrap"><bool>true</bool></property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+
+     <widget class="QWidget" name="ageTab">
+      <attribute name="title"><string>Age</string></attribute>
+      <layout class="QVBoxLayout" name="ageLayout">
+       <item>
+        <layout class="QFormLayout" name="ageFormLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="birthDateLabel">
+           <property name="text"><string>Birth date:</string></property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QDateEdit" name="birthDateEdit">
+           <property name="displayFormat"><string>yyyy/MM/dd</string></property>
+           <property name="calendarPopup"><bool>true</bool></property>
+           <property name="date">
+            <date><year>2000</year><month>1</month><day>1</day></date>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ageButton">
+         <property name="text"><string>Calculate Age</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="ageResultLabel">
+         <property name="text"><string/></property>
+         <property name="wordWrap"><bool>true</bool></property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
